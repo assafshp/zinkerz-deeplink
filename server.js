@@ -9,6 +9,11 @@ app.get('/deeplink', deeplink({
     ios_store_link: 'https://itunes.apple.com/us/app/zinkerz-toefl-full-practice/id1014499280?ls=1&mt=8'
 }));
 
+app.get('/', function(request,response){
+	console.log("Working...");
+	response.send('Hello');
+});
+
 app.use(express.static(__dirname + '/public'));
 
 // views is directory for all template files
