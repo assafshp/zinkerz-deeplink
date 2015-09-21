@@ -9,6 +9,14 @@ app.get('/', deeplink({
     ios_store_link: 'https://itunes.apple.com/us/app/zinkerz-toefl-full-practice/id1014499280?ls=1&mt=8'
 }));
 
+app.get('/deeplink',  function(request,response) {
+	deeplink({ 
+	    fallback: 'http://zinkerz.com',
+	    android_package_name: 'com.citylifeapps.cups', 
+	    ios_store_link: 'https://itunes.apple.com/us/app/zinkerz-toefl-full-practice/id1014499280?ls=1&mt=8'
+	});
+});
+
 app.get('/test', function(request,response){
 	console.log("Working...");
 	response.send('Hello');
