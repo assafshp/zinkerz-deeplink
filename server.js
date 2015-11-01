@@ -25,15 +25,17 @@ var toefl_options = {
     ios_store_link: 'https://itunes.apple.com/us/app/zinkerz-toefl-full-practice/id1014499280?ls=1&mt=8'
 }
 
+var sat_purhcase_options = extend(sat_options,{title: 'purchase'});
+var toefl_purchase_options = extend(toefl_options, {title: 'purchase'});
 
-app.get('/toefl/purchase', deeplink(extend(toefl_options, {title: 'purchase'})));
+app.get('/toefl/purchase', deeplink(toefl_purchase_options));
 app.get('/toefl', deeplink(toefl_options));
 
-app.get('/sat/purchase', deeplink(extend(sat_options,{title: 'purchase'})));
+app.get('/sat/purchase', deeplink(sat_purhcase_options));
 app.get('/sat', deeplink(sat_options));
 
 app.get('/*', function (req, res, next) {
-		console.log('all');
+		//console.log('all');
 		res.redirect('http://zinkerz.com');
 });
 
