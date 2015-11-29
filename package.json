@@ -7,10 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/assafshp/zinkerz-deeplink.git"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.13.3",
-    "node-deeplink": "^0.2.7"
+    "node-deeplink": "git+https://github.com/Knowledge-OTP/node-deeplink.git"
   }
 }
